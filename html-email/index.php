@@ -22,7 +22,7 @@ get_header(); ?>
           the_content();
 
 			endwhile;
-		<?php endif; ?>
+		endif; ?>
 
 	</div><!-- std_content00 -->
 <?php get_footer();
