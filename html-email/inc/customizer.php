@@ -67,23 +67,23 @@ function htmlemail_customize_register( $wp_customize ) {
 		'priority' => 130, // Before Additional CSS.
 	) );
 
-	$wp_customize->add_setting( 'page_layout', array(
-		'default'           => 'two-column',
-		'sanitize_callback' => 'htmlemail_sanitize_page_layout',
-		'transport'         => 'postMessage',
-	) );
+	// $wp_customize->add_setting( 'page_layout', array(
+	// 	'default'           => 'two-column',
+	// 	'sanitize_callback' => 'htmlemail_sanitize_page_layout',
+	// 	'transport'         => 'postMessage',
+	// ) );
 
-	$wp_customize->add_control( 'page_layout', array(
-		'label'       => __( 'Page Layout', 'htmlemail' ),
-		'section'     => 'theme_options',
-		'type'        => 'radio',
-		'description' => __( 'When the two column layout is assigned, the page title is in one column and content is in the other.', 'htmlemail' ),
-		'choices'     => array(
-			'one-column' => __( 'One Column', 'htmlemail' ),
-			'two-column' => __( 'Two Column', 'htmlemail' ),
-		),
-		'active_callback' => 'htmlemail_is_view_with_layout_option',
-	) );
+	// $wp_customize->add_control( 'page_layout', array(
+	// 	'label'       => __( 'Page Layout', 'htmlemail' ),
+	// 	'section'     => 'theme_options',
+	// 	'type'        => 'radio',
+	// 	'description' => __( 'When the two column layout is assigned, the page title is in one column and content is in the other.', 'htmlemail' ),
+	// 	'choices'     => array(
+	// 		'one-column' => __( 'One Column', 'htmlemail' ),
+	// 		'two-column' => __( 'Two Column', 'htmlemail' ),
+	// 	),
+	// 	'active_callback' => 'htmlemail_is_view_with_layout_option',
+	// ) );
 
 	/**
 	 * Filter number of front page sections in HTML Email.
@@ -124,18 +124,18 @@ add_action( 'customize_register', 'htmlemail_customize_register' );
 /**
  * Sanitize the page layout options.
  */
-function htmlemail_sanitize_page_layout( $input ) {
-	$valid = array(
-		'one-column' => __( 'One Column', 'htmlemail' ),
-		'two-column' => __( 'Two Column', 'htmlemail' ),
-	);
+// function htmlemail_sanitize_page_layout( $input ) {
+// 	$valid = array(
+// 		'one-column' => __( 'One Column', 'htmlemail' ),
+// 		'two-column' => __( 'Two Column', 'htmlemail' ),
+// 	);
 
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	}
+// 	if ( array_key_exists( $input, $valid ) ) {
+// 		return $input;
+// 	}
 
-	return '';
-}
+// 	return '';
+// }
 
 /**
  * Sanitize the colorscheme.

@@ -53,9 +53,6 @@
     </tr>
   </table>
 </center>
-<?php
-// Controversy! I'm commenting out wp_footer which may break plugins
-// We want to keep these emails basic to ensure they work as much as possible
-// wp_footer(); ?>
+<?php wp_footer(); ?>
 </body>
 </html>

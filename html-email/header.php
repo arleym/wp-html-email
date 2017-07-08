@@ -15,11 +15,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-
-<?php
-  // Controversy! I'm commenting out wp_head which may break plugins
-  // We want to keep these emails basic to ensure they work as much as possible
-  // wp_head(); ?>
+<?php wp_head(); ?>
 
 <style type="text/css">
   <?php/* Client-specific Styles */ ?>
@@ -30,7 +26,7 @@
   <?php/* Reset Styles */?>
   body{margin:0; padding:0;}
   img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
-  table td{border-collapse:collapse;}
+  table td{border-collapse:collapse;vertical-align:bottom}
   #backgroundTable{height:100% !important; margin:0; padding:0; width:100% !important;}
 
   <?php/* Template Styles */?>
@@ -155,6 +151,20 @@
     text-transform: uppercase;
   }
 
+  .contenttable {
+    width: 100%;
+    margin: 25px 0;
+  }
+    .contenttable td {
+      padding: 18px;
+      font-size: 14px;
+      border: 1px solid #999;
+      vertical-align: top;
+    }
+    .contenttable h4 {
+      color: #884cc3;
+      margin-bottom: 0;
+    }
   <?php/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: PREHEADER /\/\/\/\/\/\/\/\/\/\ */?>
 
   <?php /**
@@ -424,10 +434,12 @@
                           if ( $description || is_customize_preview() ) : ?>
                             <?php echo $description; ?>
                           <?php endif; ?>
+                          &nbsp;
                       </div>
                     </td>
                     <td align="right">
-                      <a href="<?php the_permalink(); ?>">View in Browser</a>
+                      &nbsp;
+                      <!-- <a href="<?php the_permalink(); ?>">View in Browser</a> -->
                     </td>
                   </tr>
                 </table><!-- // End Module: Standard Preheader \ -->
